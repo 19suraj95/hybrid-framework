@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Hybrid Test Suite]" guice-stage="DEVELOPMENT" verbose="5">
+  <listeners>
+    <listener class-name="com.automation.hybridFramework.listener.RetryFailedTestListener"/>
+    <listener class-name="com.automation.hybridFramework.listener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="Hybrid Test(failed)" verbose="5">
+    <classes>
+      <class name="com.automation.hybridFramework.testcases.Demo">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="demoTest"/>
+        </methods>
+      </class> <!-- com.automation.hybridFramework.testcases.Demo -->
+    </classes>
+  </test> <!-- Hybrid Test(failed) -->
+</suite> <!-- Failed suite [Hybrid Test Suite] -->
